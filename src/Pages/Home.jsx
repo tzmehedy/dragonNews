@@ -4,6 +4,7 @@ import Navbar from './Shared/Navbar'
 import LeftSideNavbar from './Shared/LeftSideNavbar'
 import RightSideNavbar from './Shared/RightSideNavbar'
 import Marquee from "react-fast-marquee";
+import News from '../Components/News'
 
 const Home = () => {
     return (
@@ -23,7 +24,8 @@ const Home = () => {
             <LeftSideNavbar></LeftSideNavbar>
           </div>
           <div className="md:col-span-2">
-            <h1>This is the news component</h1>
+            <h1 className='text-xl font-bold'>Dragon News Home</h1>
+            <News></News>
           </div>
           <div>
             <RightSideNavbar></RightSideNavbar>

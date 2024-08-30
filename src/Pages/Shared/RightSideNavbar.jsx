@@ -8,10 +8,7 @@ import qZone3 from '../../assets/qZone3.png'
 import bg1 from '../../assets/bg.png'
 
 const RightSideNavbar = () => {
-
     const bg = `bg-[url("${bg1}")]`;
-
-    console.log(bg)
     return (
       <div>
         {/* Login with google and facebook */}
