@@ -14,7 +14,7 @@ const NewsCard = ({ singleNews }) => {
 
   return (
     <div className="card bg-base-100 w-full shadow-xl p-2">
-      <div className="bg-gray-200 p-2 flex justify-between items-center">
+      <div className="bg-gray-200 p-2 flex justify-between items-center rounded-lg">
         <div className="flex space-x-3">
           <img src={author.img} className="h-10 w-10 rounded-full" alt="" />
           <div>
