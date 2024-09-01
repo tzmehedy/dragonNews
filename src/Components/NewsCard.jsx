@@ -9,7 +9,7 @@ import { FaStar, FaEye } from "react-icons/fa";
 
 const NewsCard = ({ singleNews }) => {
 
-    const { author, title, image_url, details, rating, total_view } =
+    const { author, title, image_url, details, rating, total_view, _id } =
       singleNews;
 
   return (
@@ -37,9 +37,11 @@ const NewsCard = ({ singleNews }) => {
       </figure>
       <div className="mt-5 p-2">
         <p className="text-justify truncate">{details}</p>
-        <Link className="text-orange-500">Read More</Link>
+        <Link to={`news/${_id}`} className="text-orange-500">
+          Read More
+        </Link>
       </div>
-      <div className='flex justify-between'>
+      <div className="flex justify-between">
         <div className="text-orange-500 flex items-center gap-2 p-2">
           <FaStar></FaStar>
           <FaStar></FaStar>
@@ -48,7 +50,7 @@ const NewsCard = ({ singleNews }) => {
           <FaStar></FaStar>
           <p className="font-bold text-gray-600">{rating.number}</p>
         </div>
-        <div className='flex items-center space-x-2'>
+        <div className="flex items-center space-x-2">
           <FaEye></FaEye>
           <p>{total_view}</p>
         </div>
