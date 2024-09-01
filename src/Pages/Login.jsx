@@ -1,4 +1,4 @@
-import { Form, Link } from "react-router-dom";
+import { Form, Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "./Shared/Header";
 import Navbar from "./Shared/Navbar";
 import { useContext } from "react";
@@ -7,9 +7,11 @@ import { toast } from "react-toastify";
 
 const Login = () => {
   const { userLogin } = useContext(AuthContext);
+  const location = useLocation()
+  const navigate = useNavigate()
+
   const handelLogin = (e) => {
     e.preventDefault();
-
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
@@ -17,6 +19,7 @@ const Login = () => {
     userLogin(email, password)
       .then((result) => {
         toast("Successfully Login");
+        navigate(location?.state? location.state : '/')
       })
       .catch((error) => {
         toast(error.message);
